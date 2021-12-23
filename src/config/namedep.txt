@@ -1,0 +1,1250 @@
+------Neurology-----
+Cardiology
+Emergency
+GeneralMedcine
+Pediatrics
+Radiology
+Surgery
+
+/*-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+*/
+try{
+		if(x==hospital.getNeurology().getName()){
+			int nTGrade = hospital.getNeurology().getNtGrade();
+			int dRGrade = hospital.getNeurology().getDrGrade();
+			
+			if(y=="Doctor"){
+				switch(z){
+				case "Grade 1":
+					JOptionPane.showMessageDialog(instance,"you can't do this operation","Warning", JOptionPane.WARNING_MESSAGE);
+					break;
+				case "Grade 2":
+					if (dRGrade==1 ) {
+						if ((credit.getValue())-GameConfiguration.UPDATE_PRICE_NEUROLOGY<0) {
+							JOptionPane.showMessageDialog(instance,"Sorry, You don't have enough money\n You credit : "+credit.getValue()+"$\nPrice this Staffing  : "+GameConfiguration.UPDATE_PRICE_NEUROLOGY+"$","Money...!",JOptionPane.WARNING_MESSAGE);
+						}else {
+							int rep = JOptionPane.showConfirmDialog(instance, "the price of the selected Staff is : "
+									+GameConfiguration.UPDATE_PRICE_NEUROLOGY+"\n"
+									+ "augmentation of patients nubmer per day : "
+									+5+"\n"
+									+ "do you want to confirm your purchase ?\n", "confirm the purchase", JOptionPane.OK_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE);
+							if (rep==JOptionPane.YES_OPTION){
+								credit.dicCredit(GameConfiguration.UPDATE_PRICE_NEUROLOGY);
+								hospital.setCredit(credit);
+								int nb_p = hospital.getNeurology().getNb_Patient();
+								hospital.getNeurology().setNb_Patient(nb_p+5);
+								hospital.getNeurology().setDrGrade(2);
+								audio.getaCLevelUp().play();
+							}
+						}
+					}else {
+						JOptionPane.showMessageDialog(instance,"you can not update this department","Warning", JOptionPane.WARNING_MESSAGE);
+					}
+					break;
+				case "Grade 3":
+					if (dRGrade==1 ) {
+						if ((credit.getValue())-(GameConfiguration.UPDATE_PRICE_NEUROLOGY*2)<0) {
+							JOptionPane.showMessageDialog(instance,"Sorry, You don't have enough money\n You credit : "+credit.getValue()+"$\nPrice this update  : "+GameConfiguration.UPDATE_PRICE_NEUROLOGY+"$","Money...!",JOptionPane.WARNING_MESSAGE);
+						}else {
+							int rep = JOptionPane.showConfirmDialog(instance, "the price of the selected update is : "
+									+GameConfiguration.UPDATE_PRICE_NEUROLOGY+"\n"
+									+ "augmentation of patients nubmer per day : "
+									+5+"\n"
+									+ "do you want to confirm your purchase ?\n", "confirm the purchase", JOptionPane.OK_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE);
+							if (rep==JOptionPane.YES_OPTION){
+								credit.dicCredit(GameConfiguration.UPDATE_PRICE_NEUROLOGY*2);
+								hospital.setCredit(credit);
+								int nb_p = hospital.getNeurology().getNb_Patient();
+								hospital.getNeurology().setNb_Patient(nb_p+10);
+								hospital.getNeurology().setDrGrade(3);
+								audio.getaCLevelUp().play();
+							}
+						}
+					}
+					else if (dRGrade==2 ) {
+						if ((credit.getValue())-GameConfiguration.UPDATE_PRICE_NEUROLOGY<0) {
+							JOptionPane.showMessageDialog(instance,"Sorry, You don't have enough money\n You credit : "+credit.getValue()+"$\nPrice this update  : "+GameConfiguration.UPDATE_PRICE_NEUROLOGY+"$","Money...!",JOptionPane.WARNING_MESSAGE);
+						}else {
+							int rep = JOptionPane.showConfirmDialog(instance, "the price of the selected update is : "
+									+GameConfiguration.UPDATE_PRICE_NEUROLOGY+"\n"
+									+ "augmentation of patients nubmer per day : "
+									+5+"\n"
+									+ "do you want to confirm your purchase ?\n", "confirm the purchase", JOptionPane.OK_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE);
+							if (rep==JOptionPane.YES_OPTION){
+								credit.dicCredit(GameConfiguration.UPDATE_PRICE_NEUROLOGY);
+								hospital.setCredit(credit);
+								int nb_p = hospital.getNeurology().getNb_Patient();
+								hospital.getNeurology().setNb_Patient(nb_p+5);
+								hospital.getNeurology().setDrGrade(3);
+								audio.getaCLevelUp().play();
+							}
+						}
+					} 
+						else{
+						JOptionPane.showMessageDialog(instance,"you can not bay this Staff","Warning", JOptionPane.WARNING_MESSAGE);
+						
+					}
+					break;
+				}
+				
+			}else{
+				switch(z){
+				case "Grade 1":
+					JOptionPane.showMessageDialog(instance,"you can't do this operation","Warning", JOptionPane.WARNING_MESSAGE);
+					break;
+				case "Grade 2":
+					if (nTGrade==1 ) {
+						if ((credit.getValue())-GameConfiguration.UPDATE_PRICE_NEUROLOGY<0) {
+							JOptionPane.showMessageDialog(instance,"Sorry, You don't have enough money\n You credit : "+credit.getValue()+"$\nPrice this Staffing  : "+GameConfiguration.UPDATE_PRICE_NEUROLOGY+"$","Money...!",JOptionPane.WARNING_MESSAGE);
+						}else {
+							int rep = JOptionPane.showConfirmDialog(instance, "the price of the selected Staff is : "
+									+GameConfiguration.UPDATE_PRICE_NEUROLOGY+"\n"
+									+ "augmentation of patients nubmer per day : "
+									+5+"\n"
+									+ "do you want to confirm your purchase ?\n", "confirm the purchase", JOptionPane.OK_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE);
+							if (rep==JOptionPane.YES_OPTION){
+								credit.dicCredit(GameConfiguration.UPDATE_PRICE_NEUROLOGY);
+								hospital.setCredit(credit);
+								int nb_p = hospital.getNeurology().getNb_Patient();
+								hospital.getNeurology().setNb_Patient(nb_p+5);
+								hospital.getNeurology().setNtGrade(2);
+								audio.getaCLevelUp().play();
+							}
+						}
+					}else {
+						JOptionPane.showMessageDialog(instance,"you can not update this department","Warning", JOptionPane.WARNING_MESSAGE);
+					}
+					break;
+				case "Grade 3":
+					if (nTGrade==1 ) {
+						if ((credit.getValue())-(GameConfiguration.UPDATE_PRICE_NEUROLOGY*2)<0) {
+							JOptionPane.showMessageDialog(instance,"Sorry, You don't have enough money\n You credit : "+credit.getValue()+"$\nPrice this update  : "+GameConfiguration.UPDATE_PRICE_NEUROLOGY+"$","Money...!",JOptionPane.WARNING_MESSAGE);
+						}else {
+							int rep = JOptionPane.showConfirmDialog(instance, "the price of the selected update is : "
+									+GameConfiguration.UPDATE_PRICE_NEUROLOGY+"\n"
+									+ "augmentation of patients nubmer per day : "
+									+10+"\n"
+									+ "do you want to confirm your purchase ?\n", "confirm the purchase", JOptionPane.OK_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE);
+							if (rep==JOptionPane.YES_OPTION){
+								credit.dicCredit(GameConfiguration.UPDATE_PRICE_NEUROLOGY*2);
+								hospital.setCredit(credit);
+								int nb_p = hospital.getNeurology().getNb_Patient();
+								hospital.getNeurology().setNb_Patient(nb_p+10);
+								hospital.getNeurology().setNtGrade(3);
+								audio.getaCLevelUp().play();
+							}
+						}
+					}
+					else if (nTGrade==2 ) {
+						if ((credit.getValue())-GameConfiguration.UPDATE_PRICE_NEUROLOGY<0) {
+							JOptionPane.showMessageDialog(instance,"Sorry, You don't have enough money\n You credit : "+credit.getValue()+"$\nPrice this update  : "+GameConfiguration.UPDATE_PRICE_NEUROLOGY+"$","Money...!",JOptionPane.WARNING_MESSAGE);
+						}else {
+							int rep = JOptionPane.showConfirmDialog(instance, "the price of the selected update is : "
+									+GameConfiguration.UPDATE_PRICE_NEUROLOGY+"\n"
+									+ "augmentation of patients nubmer per day : "
+									+5+"\n"
+									+ "do you want to confirm your purchase ?\n", "confirm the purchase", JOptionPane.OK_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE);
+							if (rep==JOptionPane.YES_OPTION){
+								credit.dicCredit(GameConfiguration.UPDATE_PRICE_NEUROLOGY);
+								hospital.setCredit(credit);
+								int nb_p = hospital.getNeurology().getNb_Patient();
+								hospital.getNeurology().setNb_Patient(nb_p+5);
+								hospital.getNeurology().setNtGrade(3);
+								audio.getaCLevelUp().play();
+							}
+						}
+					} 
+						else{
+						JOptionPane.showMessageDialog(instance,"you can not bay this Staff","Warning", JOptionPane.WARNING_MESSAGE);
+						
+					}
+					break;
+				}
+				
+			}
+		}
+		}catch(Exception e ){
+			
+		}
+		/*-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+*/
+/*-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+*/
+try{
+		if(x==hospital.getCardiology().getName()){
+			int nTGrade = hospital.getCardiology().getNtGrade();
+			int dRGrade = hospital.getCardiology().getDrGrade();
+			
+			if(y=="Doctor"){
+				switch(z){
+				case "Grade 1":
+					JOptionPane.showMessageDialog(instance,"you can't do this operation","Warning", JOptionPane.WARNING_MESSAGE);
+					break;
+				case "Grade 2":
+					if (dRGrade==1 ) {
+						if ((credit.getValue())-GameConfiguration.UPDATE_PRICE_Cardiology<0) {
+							JOptionPane.showMessageDialog(instance,"Sorry, You don't have enough money\n You credit : "+credit.getValue()+"$\nPrice this Staffing  : "+GameConfiguration.UPDATE_PRICE_Cardiology+"$","Money...!",JOptionPane.WARNING_MESSAGE);
+						}else {
+							int rep = JOptionPane.showConfirmDialog(instance, "the price of the selected Staff is : "
+									+GameConfiguration.UPDATE_PRICE_Cardiology+"\n"
+									+ "augmentation of patients nubmer per day : "
+									+5+"\n"
+									+ "do you want to confirm your purchase ?\n", "confirm the purchase", JOptionPane.OK_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE);
+							if (rep==JOptionPane.YES_OPTION){
+								credit.dicCredit(GameConfiguration.UPDATE_PRICE_Cardiology);
+								hospital.setCredit(credit);
+								int nb_p = hospital.getCardiology().getNb_Patient();
+								hospital.getCardiology().setNb_Patient(nb_p+5);
+								hospital.getCardiology().setDrGrade(2);
+								audio.getaCLevelUp().play();
+							}
+						}
+					}else {
+						JOptionPane.showMessageDialog(instance,"you can not update this department","Warning", JOptionPane.WARNING_MESSAGE);
+					}
+					break;
+				case "Grade 3":
+					if (dRGrade==1 ) {
+						if ((credit.getValue())-(GameConfiguration.UPDATE_PRICE_Cardiology*2)<0) {
+							JOptionPane.showMessageDialog(instance,"Sorry, You don't have enough money\n You credit : "+credit.getValue()+"$\nPrice this update  : "+GameConfiguration.UPDATE_PRICE_Cardiology+"$","Money...!",JOptionPane.WARNING_MESSAGE);
+						}else {
+							int rep = JOptionPane.showConfirmDialog(instance, "the price of the selected update is : "
+									+GameConfiguration.UPDATE_PRICE_Cardiology+"\n"
+									+ "augmentation of patients nubmer per day : "
+									+5+"\n"
+									+ "do you want to confirm your purchase ?\n", "confirm the purchase", JOptionPane.OK_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE);
+							if (rep==JOptionPane.YES_OPTION){
+								credit.dicCredit(GameConfiguration.UPDATE_PRICE_Cardiology*2);
+								hospital.setCredit(credit);
+								int nb_p = hospital.getCardiology().getNb_Patient();
+								hospital.getCardiology().setNb_Patient(nb_p+10);
+								hospital.getCardiology().setDrGrade(3);
+								audio.getaCLevelUp().play();
+							}
+						}
+					}
+					else if (dRGrade==2 ) {
+						if ((credit.getValue())-GameConfiguration.UPDATE_PRICE_Cardiology<0) {
+							JOptionPane.showMessageDialog(instance,"Sorry, You don't have enough money\n You credit : "+credit.getValue()+"$\nPrice this update  : "+GameConfiguration.UPDATE_PRICE_Cardiology+"$","Money...!",JOptionPane.WARNING_MESSAGE);
+						}else {
+							int rep = JOptionPane.showConfirmDialog(instance, "the price of the selected update is : "
+									+GameConfiguration.UPDATE_PRICE_Cardiology+"\n"
+									+ "augmentation of patients nubmer per day : "
+									+5+"\n"
+									+ "do you want to confirm your purchase ?\n", "confirm the purchase", JOptionPane.OK_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE);
+							if (rep==JOptionPane.YES_OPTION){
+								credit.dicCredit(GameConfiguration.UPDATE_PRICE_Cardiology);
+								hospital.setCredit(credit);
+								int nb_p = hospital.getCardiology().getNb_Patient();
+								hospital.getCardiology().setNb_Patient(nb_p+5);
+								hospital.getCardiology().setDrGrade(3);
+								audio.getaCLevelUp().play();
+							}
+						}
+					} 
+						else{
+						JOptionPane.showMessageDialog(instance,"you can not bay this Staff","Warning", JOptionPane.WARNING_MESSAGE);
+						
+					}
+					break;
+				}
+				
+			}else{
+				switch(z){
+				case "Grade 1":
+					JOptionPane.showMessageDialog(instance,"you can't do this operation","Warning", JOptionPane.WARNING_MESSAGE);
+					break;
+				case "Grade 2":
+					if (nTGrade==1 ) {
+						if ((credit.getValue())-GameConfiguration.UPDATE_PRICE_Cardiology<0) {
+							JOptionPane.showMessageDialog(instance,"Sorry, You don't have enough money\n You credit : "+credit.getValue()+"$\nPrice this Staffing  : "+GameConfiguration.UPDATE_PRICE_Cardiology+"$","Money...!",JOptionPane.WARNING_MESSAGE);
+						}else {
+							int rep = JOptionPane.showConfirmDialog(instance, "the price of the selected Staff is : "
+									+GameConfiguration.UPDATE_PRICE_Cardiology+"\n"
+									+ "augmentation of patients nubmer per day : "
+									+5+"\n"
+									+ "do you want to confirm your purchase ?\n", "confirm the purchase", JOptionPane.OK_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE);
+							if (rep==JOptionPane.YES_OPTION){
+								credit.dicCredit(GameConfiguration.UPDATE_PRICE_Cardiology);
+								hospital.setCredit(credit);
+								int nb_p = hospital.getCardiology().getNb_Patient();
+								hospital.getCardiology().setNb_Patient(nb_p+5);
+								hospital.getCardiology().setNtGrade(2);
+								audio.getaCLevelUp().play();
+							}
+						}
+					}else {
+						JOptionPane.showMessageDialog(instance,"you can not update this department","Warning", JOptionPane.WARNING_MESSAGE);
+					}
+					break;
+				case "Grade 3":
+					if (nTGrade==1 ) {
+						if ((credit.getValue())-(GameConfiguration.UPDATE_PRICE_Cardiology*2)<0) {
+							JOptionPane.showMessageDialog(instance,"Sorry, You don't have enough money\n You credit : "+credit.getValue()+"$\nPrice this update  : "+GameConfiguration.UPDATE_PRICE_Cardiology+"$","Money...!",JOptionPane.WARNING_MESSAGE);
+						}else {
+							int rep = JOptionPane.showConfirmDialog(instance, "the price of the selected update is : "
+									+GameConfiguration.UPDATE_PRICE_Cardiology+"\n"
+									+ "augmentation of patients nubmer per day : "
+									+10+"\n"
+									+ "do you want to confirm your purchase ?\n", "confirm the purchase", JOptionPane.OK_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE);
+							if (rep==JOptionPane.YES_OPTION){
+								credit.dicCredit(GameConfiguration.UPDATE_PRICE_Cardiology*2);
+								hospital.setCredit(credit);
+								int nb_p = hospital.getCardiology().getNb_Patient();
+								hospital.getCardiology().setNb_Patient(nb_p+10);
+								hospital.getCardiology().setNtGrade(3);
+								audio.getaCLevelUp().play();
+							}
+						}
+					}
+					else if (nTGrade==2 ) {
+						if ((credit.getValue())-GameConfiguration.UPDATE_PRICE_Cardiology<0) {
+							JOptionPane.showMessageDialog(instance,"Sorry, You don't have enough money\n You credit : "+credit.getValue()+"$\nPrice this update  : "+GameConfiguration.UPDATE_PRICE_Cardiology+"$","Money...!",JOptionPane.WARNING_MESSAGE);
+						}else {
+							int rep = JOptionPane.showConfirmDialog(instance, "the price of the selected update is : "
+									+GameConfiguration.UPDATE_PRICE_Cardiology+"\n"
+									+ "augmentation of patients nubmer per day : "
+									+5+"\n"
+									+ "do you want to confirm your purchase ?\n", "confirm the purchase", JOptionPane.OK_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE);
+							if (rep==JOptionPane.YES_OPTION){
+								credit.dicCredit(GameConfiguration.UPDATE_PRICE_Cardiology);
+								hospital.setCredit(credit);
+								int nb_p = hospital.getCardiology().getNb_Patient();
+								hospital.getCardiology().setNb_Patient(nb_p+5);
+								hospital.getCardiology().setNtGrade(3);
+								audio.getaCLevelUp().play();
+							}
+						}
+					} 
+						else{
+						JOptionPane.showMessageDialog(instance,"you can not bay this Staff","Warning", JOptionPane.WARNING_MESSAGE);
+						
+					}
+					break;
+				}
+				
+			}
+		}
+		}catch(Exception e ){
+			
+		}
+		/*-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+*/
+try{
+		if(x==hospital.getEmergency().getName()){
+			int nTGrade = hospital.getEmergency().getNtGrade();
+			int dRGrade = hospital.getEmergency().getDrGrade();
+			
+			if(y=="Doctor"){
+				switch(z){
+				case "Grade 1":
+					JOptionPane.showMessageDialog(instance,"you can't do this operation","Warning", JOptionPane.WARNING_MESSAGE);
+					break;
+				case "Grade 2":
+					if (dRGrade==1 ) {
+						if ((credit.getValue())-GameConfiguration.UPDATE_PRICE_Emergency<0) {
+							JOptionPane.showMessageDialog(instance,"Sorry, You don't have enough money\n You credit : "+credit.getValue()+"$\nPrice this Staffing  : "+GameConfiguration.UPDATE_PRICE_Emergency+"$","Money...!",JOptionPane.WARNING_MESSAGE);
+						}else {
+							int rep = JOptionPane.showConfirmDialog(instance, "the price of the selected Staff is : "
+									+GameConfiguration.UPDATE_PRICE_Emergency+"\n"
+									+ "augmentation of patients nubmer per day : "
+									+5+"\n"
+									+ "do you want to confirm your purchase ?\n", "confirm the purchase", JOptionPane.OK_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE);
+							if (rep==JOptionPane.YES_OPTION){
+								credit.dicCredit(GameConfiguration.UPDATE_PRICE_Emergency);
+								hospital.setCredit(credit);
+								int nb_p = hospital.getEmergency().getNb_Patient();
+								hospital.getEmergency().setNb_Patient(nb_p+5);
+								hospital.getEmergency().setDrGrade(2);
+								audio.getaCLevelUp().play();
+							}
+						}
+					}else {
+						JOptionPane.showMessageDialog(instance,"you can not update this department","Warning", JOptionPane.WARNING_MESSAGE);
+					}
+					break;
+				case "Grade 3":
+					if (dRGrade==1 ) {
+						if ((credit.getValue())-(GameConfiguration.UPDATE_PRICE_Emergency*2)<0) {
+							JOptionPane.showMessageDialog(instance,"Sorry, You don't have enough money\n You credit : "+credit.getValue()+"$\nPrice this update  : "+GameConfiguration.UPDATE_PRICE_Emergency+"$","Money...!",JOptionPane.WARNING_MESSAGE);
+						}else {
+							int rep = JOptionPane.showConfirmDialog(instance, "the price of the selected update is : "
+									+GameConfiguration.UPDATE_PRICE_Emergency+"\n"
+									+ "augmentation of patients nubmer per day : "
+									+5+"\n"
+									+ "do you want to confirm your purchase ?\n", "confirm the purchase", JOptionPane.OK_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE);
+							if (rep==JOptionPane.YES_OPTION){
+								credit.dicCredit(GameConfiguration.UPDATE_PRICE_Emergency*2);
+								hospital.setCredit(credit);
+								int nb_p = hospital.getEmergency().getNb_Patient();
+								hospital.getEmergency().setNb_Patient(nb_p+10);
+								hospital.getEmergency().setDrGrade(3);
+								audio.getaCLevelUp().play();
+							}
+						}
+					}
+					else if (dRGrade==2 ) {
+						if ((credit.getValue())-GameConfiguration.UPDATE_PRICE_Emergency<0) {
+							JOptionPane.showMessageDialog(instance,"Sorry, You don't have enough money\n You credit : "+credit.getValue()+"$\nPrice this update  : "+GameConfiguration.UPDATE_PRICE_Emergency+"$","Money...!",JOptionPane.WARNING_MESSAGE);
+						}else {
+							int rep = JOptionPane.showConfirmDialog(instance, "the price of the selected update is : "
+									+GameConfiguration.UPDATE_PRICE_Emergency+"\n"
+									+ "augmentation of patients nubmer per day : "
+									+5+"\n"
+									+ "do you want to confirm your purchase ?\n", "confirm the purchase", JOptionPane.OK_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE);
+							if (rep==JOptionPane.YES_OPTION){
+								credit.dicCredit(GameConfiguration.UPDATE_PRICE_Emergency);
+								hospital.setCredit(credit);
+								int nb_p = hospital.getEmergency().getNb_Patient();
+								hospital.getEmergency().setNb_Patient(nb_p+5);
+								hospital.getEmergency().setDrGrade(3);
+								audio.getaCLevelUp().play();
+							}
+						}
+					} 
+						else{
+						JOptionPane.showMessageDialog(instance,"you can not bay this Staff","Warning", JOptionPane.WARNING_MESSAGE);
+						
+					}
+					break;
+				}
+				
+			}else{
+				switch(z){
+				case "Grade 1":
+					JOptionPane.showMessageDialog(instance,"you can't do this operation","Warning", JOptionPane.WARNING_MESSAGE);
+					break;
+				case "Grade 2":
+					if (nTGrade==1 ) {
+						if ((credit.getValue())-GameConfiguration.UPDATE_PRICE_Emergency<0) {
+							JOptionPane.showMessageDialog(instance,"Sorry, You don't have enough money\n You credit : "+credit.getValue()+"$\nPrice this Staffing  : "+GameConfiguration.UPDATE_PRICE_Emergency+"$","Money...!",JOptionPane.WARNING_MESSAGE);
+						}else {
+							int rep = JOptionPane.showConfirmDialog(instance, "the price of the selected Staff is : "
+									+GameConfiguration.UPDATE_PRICE_Emergency+"\n"
+									+ "augmentation of patients nubmer per day : "
+									+5+"\n"
+									+ "do you want to confirm your purchase ?\n", "confirm the purchase", JOptionPane.OK_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE);
+							if (rep==JOptionPane.YES_OPTION){
+								credit.dicCredit(GameConfiguration.UPDATE_PRICE_Emergency);
+								hospital.setCredit(credit);
+								int nb_p = hospital.getEmergency().getNb_Patient();
+								hospital.getEmergency().setNb_Patient(nb_p+5);
+								hospital.getEmergency().setNtGrade(2);
+								audio.getaCLevelUp().play();
+							}
+						}
+					}else {
+						JOptionPane.showMessageDialog(instance,"you can not update this department","Warning", JOptionPane.WARNING_MESSAGE);
+					}
+					break;
+				case "Grade 3":
+					if (nTGrade==1 ) {
+						if ((credit.getValue())-(GameConfiguration.UPDATE_PRICE_Emergency*2)<0) {
+							JOptionPane.showMessageDialog(instance,"Sorry, You don't have enough money\n You credit : "+credit.getValue()+"$\nPrice this update  : "+GameConfiguration.UPDATE_PRICE_Emergency+"$","Money...!",JOptionPane.WARNING_MESSAGE);
+						}else {
+							int rep = JOptionPane.showConfirmDialog(instance, "the price of the selected update is : "
+									+GameConfiguration.UPDATE_PRICE_Emergency+"\n"
+									+ "augmentation of patients nubmer per day : "
+									+10+"\n"
+									+ "do you want to confirm your purchase ?\n", "confirm the purchase", JOptionPane.OK_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE);
+							if (rep==JOptionPane.YES_OPTION){
+								credit.dicCredit(GameConfiguration.UPDATE_PRICE_Emergency*2);
+								hospital.setCredit(credit);
+								int nb_p = hospital.getEmergency().getNb_Patient();
+								hospital.getEmergency().setNb_Patient(nb_p+10);
+								hospital.getEmergency().setNtGrade(3);
+								audio.getaCLevelUp().play();
+							}
+						}
+					}
+					else if (nTGrade==2 ) {
+						if ((credit.getValue())-GameConfiguration.UPDATE_PRICE_Emergency<0) {
+							JOptionPane.showMessageDialog(instance,"Sorry, You don't have enough money\n You credit : "+credit.getValue()+"$\nPrice this update  : "+GameConfiguration.UPDATE_PRICE_Emergency+"$","Money...!",JOptionPane.WARNING_MESSAGE);
+						}else {
+							int rep = JOptionPane.showConfirmDialog(instance, "the price of the selected update is : "
+									+GameConfiguration.UPDATE_PRICE_Emergency+"\n"
+									+ "augmentation of patients nubmer per day : "
+									+5+"\n"
+									+ "do you want to confirm your purchase ?\n", "confirm the purchase", JOptionPane.OK_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE);
+							if (rep==JOptionPane.YES_OPTION){
+								credit.dicCredit(GameConfiguration.UPDATE_PRICE_Emergency);
+								hospital.setCredit(credit);
+								int nb_p = hospital.getEmergency().getNb_Patient();
+								hospital.getEmergency().setNb_Patient(nb_p+5);
+								hospital.getEmergency().setNtGrade(3);
+								audio.getaCLevelUp().play();
+							}
+						}
+					} 
+						else{
+						JOptionPane.showMessageDialog(instance,"you can not bay this Staff","Warning", JOptionPane.WARNING_MESSAGE);
+						
+					}
+					break;
+				}
+				
+			}
+		}
+		}catch(Exception e ){
+			
+		}
+/*-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+*/
+try{
+		if(x==hospital.getGeneralMedcine().getName()){
+			int nTGrade = hospital.getGeneralMedcine().getNtGrade();
+			int dRGrade = hospital.getGeneralMedcine().getDrGrade();
+			
+			if(y=="Doctor"){
+				switch(z){
+				case "Grade 1":
+					JOptionPane.showMessageDialog(instance,"you can't do this operation","Warning", JOptionPane.WARNING_MESSAGE);
+					break;
+				case "Grade 2":
+					if (dRGrade==1 ) {
+						if ((credit.getValue())-GameConfiguration.UPDATE_PRICE_GeneralMedcine<0) {
+							JOptionPane.showMessageDialog(instance,"Sorry, You don't have enough money\n You credit : "+credit.getValue()+"$\nPrice this Staffing  : "+GameConfiguration.UPDATE_PRICE_GeneralMedcine+"$","Money...!",JOptionPane.WARNING_MESSAGE);
+						}else {
+							int rep = JOptionPane.showConfirmDialog(instance, "the price of the selected Staff is : "
+									+GameConfiguration.UPDATE_PRICE_GeneralMedcine+"\n"
+									+ "augmentation of patients nubmer per day : "
+									+5+"\n"
+									+ "do you want to confirm your purchase ?\n", "confirm the purchase", JOptionPane.OK_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE);
+							if (rep==JOptionPane.YES_OPTION){
+								credit.dicCredit(GameConfiguration.UPDATE_PRICE_GeneralMedcine);
+								hospital.setCredit(credit);
+								int nb_p = hospital.getGeneralMedcine().getNb_Patient();
+								hospital.getGeneralMedcine().setNb_Patient(nb_p+5);
+								hospital.getGeneralMedcine().setDrGrade(2);
+								audio.getaCLevelUp().play();
+							}
+						}
+					}else {
+						JOptionPane.showMessageDialog(instance,"you can not update this department","Warning", JOptionPane.WARNING_MESSAGE);
+					}
+					break;
+				case "Grade 3":
+					if (dRGrade==1 ) {
+						if ((credit.getValue())-(GameConfiguration.UPDATE_PRICE_GeneralMedcine*2)<0) {
+							JOptionPane.showMessageDialog(instance,"Sorry, You don't have enough money\n You credit : "+credit.getValue()+"$\nPrice this update  : "+GameConfiguration.UPDATE_PRICE_GeneralMedcine+"$","Money...!",JOptionPane.WARNING_MESSAGE);
+						}else {
+							int rep = JOptionPane.showConfirmDialog(instance, "the price of the selected update is : "
+									+GameConfiguration.UPDATE_PRICE_GeneralMedcine+"\n"
+									+ "augmentation of patients nubmer per day : "
+									+5+"\n"
+									+ "do you want to confirm your purchase ?\n", "confirm the purchase", JOptionPane.OK_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE);
+							if (rep==JOptionPane.YES_OPTION){
+								credit.dicCredit(GameConfiguration.UPDATE_PRICE_GeneralMedcine*2);
+								hospital.setCredit(credit);
+								int nb_p = hospital.getGeneralMedcine().getNb_Patient();
+								hospital.getGeneralMedcine().setNb_Patient(nb_p+10);
+								hospital.getGeneralMedcine().setDrGrade(3);
+								audio.getaCLevelUp().play();
+							}
+						}
+					}
+					else if (dRGrade==2 ) {
+						if ((credit.getValue())-GameConfiguration.UPDATE_PRICE_GeneralMedcine<0) {
+							JOptionPane.showMessageDialog(instance,"Sorry, You don't have enough money\n You credit : "+credit.getValue()+"$\nPrice this update  : "+GameConfiguration.UPDATE_PRICE_GeneralMedcine+"$","Money...!",JOptionPane.WARNING_MESSAGE);
+						}else {
+							int rep = JOptionPane.showConfirmDialog(instance, "the price of the selected update is : "
+									+GameConfiguration.UPDATE_PRICE_GeneralMedcine+"\n"
+									+ "augmentation of patients nubmer per day : "
+									+5+"\n"
+									+ "do you want to confirm your purchase ?\n", "confirm the purchase", JOptionPane.OK_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE);
+							if (rep==JOptionPane.YES_OPTION){
+								credit.dicCredit(GameConfiguration.UPDATE_PRICE_GeneralMedcine);
+								hospital.setCredit(credit);
+								int nb_p = hospital.getGeneralMedcine().getNb_Patient();
+								hospital.getGeneralMedcine().setNb_Patient(nb_p+5);
+								hospital.getGeneralMedcine().setDrGrade(3);
+								audio.getaCLevelUp().play();
+							}
+						}
+					} 
+						else{
+						JOptionPane.showMessageDialog(instance,"you can not bay this Staff","Warning", JOptionPane.WARNING_MESSAGE);
+						
+					}
+					break;
+				}
+				
+			}else{
+				switch(z){
+				case "Grade 1":
+					JOptionPane.showMessageDialog(instance,"you can't do this operation","Warning", JOptionPane.WARNING_MESSAGE);
+					break;
+				case "Grade 2":
+					if (nTGrade==1 ) {
+						if ((credit.getValue())-GameConfiguration.UPDATE_PRICE_GeneralMedcine<0) {
+							JOptionPane.showMessageDialog(instance,"Sorry, You don't have enough money\n You credit : "+credit.getValue()+"$\nPrice this Staffing  : "+GameConfiguration.UPDATE_PRICE_GeneralMedcine+"$","Money...!",JOptionPane.WARNING_MESSAGE);
+						}else {
+							int rep = JOptionPane.showConfirmDialog(instance, "the price of the selected Staff is : "
+									+GameConfiguration.UPDATE_PRICE_GeneralMedcine+"\n"
+									+ "augmentation of patients nubmer per day : "
+									+5+"\n"
+									+ "do you want to confirm your purchase ?\n", "confirm the purchase", JOptionPane.OK_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE);
+							if (rep==JOptionPane.YES_OPTION){
+								credit.dicCredit(GameConfiguration.UPDATE_PRICE_GeneralMedcine);
+								hospital.setCredit(credit);
+								int nb_p = hospital.getGeneralMedcine().getNb_Patient();
+								hospital.getGeneralMedcine().setNb_Patient(nb_p+5);
+								hospital.getGeneralMedcine().setNtGrade(2);
+								audio.getaCLevelUp().play();
+							}
+						}
+					}else {
+						JOptionPane.showMessageDialog(instance,"you can not update this department","Warning", JOptionPane.WARNING_MESSAGE);
+					}
+					break;
+				case "Grade 3":
+					if (nTGrade==1 ) {
+						if ((credit.getValue())-(GameConfiguration.UPDATE_PRICE_GeneralMedcine*2)<0) {
+							JOptionPane.showMessageDialog(instance,"Sorry, You don't have enough money\n You credit : "+credit.getValue()+"$\nPrice this update  : "+GameConfiguration.UPDATE_PRICE_GeneralMedcine+"$","Money...!",JOptionPane.WARNING_MESSAGE);
+						}else {
+							int rep = JOptionPane.showConfirmDialog(instance, "the price of the selected update is : "
+									+GameConfiguration.UPDATE_PRICE_GeneralMedcine+"\n"
+									+ "augmentation of patients nubmer per day : "
+									+10+"\n"
+									+ "do you want to confirm your purchase ?\n", "confirm the purchase", JOptionPane.OK_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE);
+							if (rep==JOptionPane.YES_OPTION){
+								credit.dicCredit(GameConfiguration.UPDATE_PRICE_GeneralMedcine*2);
+								hospital.setCredit(credit);
+								int nb_p = hospital.getGeneralMedcine().getNb_Patient();
+								hospital.getGeneralMedcine().setNb_Patient(nb_p+10);
+								hospital.getGeneralMedcine().setNtGrade(3);
+								audio.getaCLevelUp().play();
+							}
+						}
+					}
+					else if (nTGrade==2 ) {
+						if ((credit.getValue())-GameConfiguration.UPDATE_PRICE_GeneralMedcine<0) {
+							JOptionPane.showMessageDialog(instance,"Sorry, You don't have enough money\n You credit : "+credit.getValue()+"$\nPrice this update  : "+GameConfiguration.UPDATE_PRICE_GeneralMedcine+"$","Money...!",JOptionPane.WARNING_MESSAGE);
+						}else {
+							int rep = JOptionPane.showConfirmDialog(instance, "the price of the selected update is : "
+									+GameConfiguration.UPDATE_PRICE_GeneralMedcine+"\n"
+									+ "augmentation of patients nubmer per day : "
+									+5+"\n"
+									+ "do you want to confirm your purchase ?\n", "confirm the purchase", JOptionPane.OK_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE);
+							if (rep==JOptionPane.YES_OPTION){
+								credit.dicCredit(GameConfiguration.UPDATE_PRICE_GeneralMedcine);
+								hospital.setCredit(credit);
+								int nb_p = hospital.getGeneralMedcine().getNb_Patient();
+								hospital.getGeneralMedcine().setNb_Patient(nb_p+5);
+								hospital.getGeneralMedcine().setNtGrade(3);
+								audio.getaCLevelUp().play();
+							}
+						}
+					} 
+						else{
+						JOptionPane.showMessageDialog(instance,"you can not bay this Staff","Warning", JOptionPane.WARNING_MESSAGE);
+						
+					}
+					break;
+				}
+				
+			}
+		}
+		}catch(Exception e ){
+			
+		}
+		/*-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+*/
+try{
+		if(x==hospital.getPediatrics().getName()){
+			int nTGrade = hospital.getPediatrics().getNtGrade();
+			int dRGrade = hospital.getPediatrics().getDrGrade();
+			
+			if(y=="Doctor"){
+				switch(z){
+				case "Grade 1":
+					JOptionPane.showMessageDialog(instance,"you can't do this operation","Warning", JOptionPane.WARNING_MESSAGE);
+					break;
+				case "Grade 2":
+					if (dRGrade==1 ) {
+						if ((credit.getValue())-GameConfiguration.UPDATE_PRICE_Pediatrics<0) {
+							JOptionPane.showMessageDialog(instance,"Sorry, You don't have enough money\n You credit : "+credit.getValue()+"$\nPrice this Staffing  : "+GameConfiguration.UPDATE_PRICE_Pediatrics+"$","Money...!",JOptionPane.WARNING_MESSAGE);
+						}else {
+							int rep = JOptionPane.showConfirmDialog(instance, "the price of the selected Staff is : "
+									+GameConfiguration.UPDATE_PRICE_Pediatrics+"\n"
+									+ "augmentation of patients nubmer per day : "
+									+5+"\n"
+									+ "do you want to confirm your purchase ?\n", "confirm the purchase", JOptionPane.OK_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE);
+							if (rep==JOptionPane.YES_OPTION){
+								credit.dicCredit(GameConfiguration.UPDATE_PRICE_Pediatrics);
+								hospital.setCredit(credit);
+								int nb_p = hospital.getPediatrics().getNb_Patient();
+								hospital.getPediatrics().setNb_Patient(nb_p+5);
+								hospital.getPediatrics().setDrGrade(2);
+								audio.getaCLevelUp().play();
+							}
+						}
+					}else {
+						JOptionPane.showMessageDialog(instance,"you can not update this department","Warning", JOptionPane.WARNING_MESSAGE);
+					}
+					break;
+				case "Grade 3":
+					if (dRGrade==1 ) {
+						if ((credit.getValue())-(GameConfiguration.UPDATE_PRICE_Pediatrics*2)<0) {
+							JOptionPane.showMessageDialog(instance,"Sorry, You don't have enough money\n You credit : "+credit.getValue()+"$\nPrice this update  : "+GameConfiguration.UPDATE_PRICE_Pediatrics+"$","Money...!",JOptionPane.WARNING_MESSAGE);
+						}else {
+							int rep = JOptionPane.showConfirmDialog(instance, "the price of the selected update is : "
+									+GameConfiguration.UPDATE_PRICE_Pediatrics+"\n"
+									+ "augmentation of patients nubmer per day : "
+									+5+"\n"
+									+ "do you want to confirm your purchase ?\n", "confirm the purchase", JOptionPane.OK_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE);
+							if (rep==JOptionPane.YES_OPTION){
+								credit.dicCredit(GameConfiguration.UPDATE_PRICE_Pediatrics*2);
+								hospital.setCredit(credit);
+								int nb_p = hospital.getPediatrics().getNb_Patient();
+								hospital.getPediatrics().setNb_Patient(nb_p+10);
+								hospital.getPediatrics().setDrGrade(3);
+								audio.getaCLevelUp().play();
+							}
+						}
+					}
+					else if (dRGrade==2 ) {
+						if ((credit.getValue())-GameConfiguration.UPDATE_PRICE_Pediatrics<0) {
+							JOptionPane.showMessageDialog(instance,"Sorry, You don't have enough money\n You credit : "+credit.getValue()+"$\nPrice this update  : "+GameConfiguration.UPDATE_PRICE_Pediatrics+"$","Money...!",JOptionPane.WARNING_MESSAGE);
+						}else {
+							int rep = JOptionPane.showConfirmDialog(instance, "the price of the selected update is : "
+									+GameConfiguration.UPDATE_PRICE_Pediatrics+"\n"
+									+ "augmentation of patients nubmer per day : "
+									+5+"\n"
+									+ "do you want to confirm your purchase ?\n", "confirm the purchase", JOptionPane.OK_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE);
+							if (rep==JOptionPane.YES_OPTION){
+								credit.dicCredit(GameConfiguration.UPDATE_PRICE_Pediatrics);
+								hospital.setCredit(credit);
+								int nb_p = hospital.getPediatrics().getNb_Patient();
+								hospital.getPediatrics().setNb_Patient(nb_p+5);
+								hospital.getPediatrics().setDrGrade(3);
+								audio.getaCLevelUp().play();
+							}
+						}
+					} 
+						else{
+						JOptionPane.showMessageDialog(instance,"you can not bay this Staff","Warning", JOptionPane.WARNING_MESSAGE);
+						
+					}
+					break;
+				}
+				
+			}else{
+				switch(z){
+				case "Grade 1":
+					JOptionPane.showMessageDialog(instance,"you can't do this operation","Warning", JOptionPane.WARNING_MESSAGE);
+					break;
+				case "Grade 2":
+					if (nTGrade==1 ) {
+						if ((credit.getValue())-GameConfiguration.UPDATE_PRICE_Pediatrics<0) {
+							JOptionPane.showMessageDialog(instance,"Sorry, You don't have enough money\n You credit : "+credit.getValue()+"$\nPrice this Staffing  : "+GameConfiguration.UPDATE_PRICE_Pediatrics+"$","Money...!",JOptionPane.WARNING_MESSAGE);
+						}else {
+							int rep = JOptionPane.showConfirmDialog(instance, "the price of the selected Staff is : "
+									+GameConfiguration.UPDATE_PRICE_Pediatrics+"\n"
+									+ "augmentation of patients nubmer per day : "
+									+5+"\n"
+									+ "do you want to confirm your purchase ?\n", "confirm the purchase", JOptionPane.OK_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE);
+							if (rep==JOptionPane.YES_OPTION){
+								credit.dicCredit(GameConfiguration.UPDATE_PRICE_Pediatrics);
+								hospital.setCredit(credit);
+								int nb_p = hospital.getPediatrics().getNb_Patient();
+								hospital.getPediatrics().setNb_Patient(nb_p+5);
+								hospital.getPediatrics().setNtGrade(2);
+								audio.getaCLevelUp().play();
+							}
+						}
+					}else {
+						JOptionPane.showMessageDialog(instance,"you can not update this department","Warning", JOptionPane.WARNING_MESSAGE);
+					}
+					break;
+				case "Grade 3":
+					if (nTGrade==1 ) {
+						if ((credit.getValue())-(GameConfiguration.UPDATE_PRICE_Pediatrics*2)<0) {
+							JOptionPane.showMessageDialog(instance,"Sorry, You don't have enough money\n You credit : "+credit.getValue()+"$\nPrice this update  : "+GameConfiguration.UPDATE_PRICE_Pediatrics+"$","Money...!",JOptionPane.WARNING_MESSAGE);
+						}else {
+							int rep = JOptionPane.showConfirmDialog(instance, "the price of the selected update is : "
+									+GameConfiguration.UPDATE_PRICE_Pediatrics+"\n"
+									+ "augmentation of patients nubmer per day : "
+									+10+"\n"
+									+ "do you want to confirm your purchase ?\n", "confirm the purchase", JOptionPane.OK_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE);
+							if (rep==JOptionPane.YES_OPTION){
+								credit.dicCredit(GameConfiguration.UPDATE_PRICE_Pediatrics*2);
+								hospital.setCredit(credit);
+								int nb_p = hospital.getPediatrics().getNb_Patient();
+								hospital.getPediatrics().setNb_Patient(nb_p+10);
+								hospital.getPediatrics().setNtGrade(3);
+								audio.getaCLevelUp().play();
+							}
+						}
+					}
+					else if (nTGrade==2 ) {
+						if ((credit.getValue())-GameConfiguration.UPDATE_PRICE_Pediatrics<0) {
+							JOptionPane.showMessageDialog(instance,"Sorry, You don't have enough money\n You credit : "+credit.getValue()+"$\nPrice this update  : "+GameConfiguration.UPDATE_PRICE_Pediatrics+"$","Money...!",JOptionPane.WARNING_MESSAGE);
+						}else {
+							int rep = JOptionPane.showConfirmDialog(instance, "the price of the selected update is : "
+									+GameConfiguration.UPDATE_PRICE_Pediatrics+"\n"
+									+ "augmentation of patients nubmer per day : "
+									+5+"\n"
+									+ "do you want to confirm your purchase ?\n", "confirm the purchase", JOptionPane.OK_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE);
+							if (rep==JOptionPane.YES_OPTION){
+								credit.dicCredit(GameConfiguration.UPDATE_PRICE_Pediatrics);
+								hospital.setCredit(credit);
+								int nb_p = hospital.getPediatrics().getNb_Patient();
+								hospital.getPediatrics().setNb_Patient(nb_p+5);
+								hospital.getPediatrics().setNtGrade(3);
+								audio.getaCLevelUp().play();
+							}
+						}
+					} 
+						else{
+						JOptionPane.showMessageDialog(instance,"you can not bay this Staff","Warning", JOptionPane.WARNING_MESSAGE);
+						
+					}
+					break;
+				}
+				
+			}
+		}
+		}catch(Exception e ){
+			
+		}
+		/*-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+*/
+try{
+		if(x==hospital.getRadiology().getName()){
+			int nTGrade = hospital.getRadiology().getNtGrade();
+			int dRGrade = hospital.getRadiology().getDrGrade();
+			
+			if(y=="Doctor"){
+				switch(z){
+				case "Grade 1":
+					JOptionPane.showMessageDialog(instance,"you can't do this operation","Warning", JOptionPane.WARNING_MESSAGE);
+					break;
+				case "Grade 2":
+					if (dRGrade==1 ) {
+						if ((credit.getValue())-GameConfiguration.UPDATE_PRICE_Radiology<0) {
+							JOptionPane.showMessageDialog(instance,"Sorry, You don't have enough money\n You credit : "+credit.getValue()+"$\nPrice this Staffing  : "+GameConfiguration.UPDATE_PRICE_Radiology+"$","Money...!",JOptionPane.WARNING_MESSAGE);
+						}else {
+							int rep = JOptionPane.showConfirmDialog(instance, "the price of the selected Staff is : "
+									+GameConfiguration.UPDATE_PRICE_Radiology+"\n"
+									+ "augmentation of patients nubmer per day : "
+									+5+"\n"
+									+ "do you want to confirm your purchase ?\n", "confirm the purchase", JOptionPane.OK_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE);
+							if (rep==JOptionPane.YES_OPTION){
+								credit.dicCredit(GameConfiguration.UPDATE_PRICE_Radiology);
+								hospital.setCredit(credit);
+								int nb_p = hospital.getRadiology().getNb_Patient();
+								hospital.getRadiology().setNb_Patient(nb_p+5);
+								hospital.getRadiology().setDrGrade(2);
+								audio.getaCLevelUp().play();
+							}
+						}
+					}else {
+						JOptionPane.showMessageDialog(instance,"you can not update this department","Warning", JOptionPane.WARNING_MESSAGE);
+					}
+					break;
+				case "Grade 3":
+					if (dRGrade==1 ) {
+						if ((credit.getValue())-(GameConfiguration.UPDATE_PRICE_Radiology*2)<0) {
+							JOptionPane.showMessageDialog(instance,"Sorry, You don't have enough money\n You credit : "+credit.getValue()+"$\nPrice this update  : "+GameConfiguration.UPDATE_PRICE_Radiology+"$","Money...!",JOptionPane.WARNING_MESSAGE);
+						}else {
+							int rep = JOptionPane.showConfirmDialog(instance, "the price of the selected update is : "
+									+GameConfiguration.UPDATE_PRICE_Radiology+"\n"
+									+ "augmentation of patients nubmer per day : "
+									+5+"\n"
+									+ "do you want to confirm your purchase ?\n", "confirm the purchase", JOptionPane.OK_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE);
+							if (rep==JOptionPane.YES_OPTION){
+								credit.dicCredit(GameConfiguration.UPDATE_PRICE_Radiology*2);
+								hospital.setCredit(credit);
+								int nb_p = hospital.getRadiology().getNb_Patient();
+								hospital.getRadiology().setNb_Patient(nb_p+10);
+								hospital.getRadiology().setDrGrade(3);
+								audio.getaCLevelUp().play();
+							}
+						}
+					}
+					else if (dRGrade==2 ) {
+						if ((credit.getValue())-GameConfiguration.UPDATE_PRICE_Radiology<0) {
+							JOptionPane.showMessageDialog(instance,"Sorry, You don't have enough money\n You credit : "+credit.getValue()+"$\nPrice this update  : "+GameConfiguration.UPDATE_PRICE_Radiology+"$","Money...!",JOptionPane.WARNING_MESSAGE);
+						}else {
+							int rep = JOptionPane.showConfirmDialog(instance, "the price of the selected update is : "
+									+GameConfiguration.UPDATE_PRICE_Radiology+"\n"
+									+ "augmentation of patients nubmer per day : "
+									+5+"\n"
+									+ "do you want to confirm your purchase ?\n", "confirm the purchase", JOptionPane.OK_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE);
+							if (rep==JOptionPane.YES_OPTION){
+								credit.dicCredit(GameConfiguration.UPDATE_PRICE_Radiology);
+								hospital.setCredit(credit);
+								int nb_p = hospital.getRadiology().getNb_Patient();
+								hospital.getRadiology().setNb_Patient(nb_p+5);
+								hospital.getRadiology().setDrGrade(3);
+								audio.getaCLevelUp().play();
+							}
+						}
+					} 
+						else{
+						JOptionPane.showMessageDialog(instance,"you can not bay this Staff","Warning", JOptionPane.WARNING_MESSAGE);
+						
+					}
+					break;
+				}
+				
+			}else{
+				switch(z){
+				case "Grade 1":
+					JOptionPane.showMessageDialog(instance,"you can't do this operation","Warning", JOptionPane.WARNING_MESSAGE);
+					break;
+				case "Grade 2":
+					if (nTGrade==1 ) {
+						if ((credit.getValue())-GameConfiguration.UPDATE_PRICE_Radiology<0) {
+							JOptionPane.showMessageDialog(instance,"Sorry, You don't have enough money\n You credit : "+credit.getValue()+"$\nPrice this Staffing  : "+GameConfiguration.UPDATE_PRICE_Radiology+"$","Money...!",JOptionPane.WARNING_MESSAGE);
+						}else {
+							int rep = JOptionPane.showConfirmDialog(instance, "the price of the selected Staff is : "
+									+GameConfiguration.UPDATE_PRICE_Radiology+"\n"
+									+ "augmentation of patients nubmer per day : "
+									+5+"\n"
+									+ "do you want to confirm your purchase ?\n", "confirm the purchase", JOptionPane.OK_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE);
+							if (rep==JOptionPane.YES_OPTION){
+								credit.dicCredit(GameConfiguration.UPDATE_PRICE_Radiology);
+								hospital.setCredit(credit);
+								int nb_p = hospital.getRadiology().getNb_Patient();
+								hospital.getRadiology().setNb_Patient(nb_p+5);
+								hospital.getRadiology().setNtGrade(2);
+								audio.getaCLevelUp().play();
+							}
+						}
+					}else {
+						JOptionPane.showMessageDialog(instance,"you can not update this department","Warning", JOptionPane.WARNING_MESSAGE);
+					}
+					break;
+				case "Grade 3":
+					if (nTGrade==1 ) {
+						if ((credit.getValue())-(GameConfiguration.UPDATE_PRICE_Radiology*2)<0) {
+							JOptionPane.showMessageDialog(instance,"Sorry, You don't have enough money\n You credit : "+credit.getValue()+"$\nPrice this update  : "+GameConfiguration.UPDATE_PRICE_Radiology+"$","Money...!",JOptionPane.WARNING_MESSAGE);
+						}else {
+							int rep = JOptionPane.showConfirmDialog(instance, "the price of the selected update is : "
+									+GameConfiguration.UPDATE_PRICE_Radiology+"\n"
+									+ "augmentation of patients nubmer per day : "
+									+10+"\n"
+									+ "do you want to confirm your purchase ?\n", "confirm the purchase", JOptionPane.OK_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE);
+							if (rep==JOptionPane.YES_OPTION){
+								credit.dicCredit(GameConfiguration.UPDATE_PRICE_Radiology*2);
+								hospital.setCredit(credit);
+								int nb_p = hospital.getRadiology().getNb_Patient();
+								hospital.getRadiology().setNb_Patient(nb_p+10);
+								hospital.getRadiology().setNtGrade(3);
+								audio.getaCLevelUp().play();
+							}
+						}
+					}
+					else if (nTGrade==2 ) {
+						if ((credit.getValue())-GameConfiguration.UPDATE_PRICE_Radiology<0) {
+							JOptionPane.showMessageDialog(instance,"Sorry, You don't have enough money\n You credit : "+credit.getValue()+"$\nPrice this update  : "+GameConfiguration.UPDATE_PRICE_Radiology+"$","Money...!",JOptionPane.WARNING_MESSAGE);
+						}else {
+							int rep = JOptionPane.showConfirmDialog(instance, "the price of the selected update is : "
+									+GameConfiguration.UPDATE_PRICE_Radiology+"\n"
+									+ "augmentation of patients nubmer per day : "
+									+5+"\n"
+									+ "do you want to confirm your purchase ?\n", "confirm the purchase", JOptionPane.OK_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE);
+							if (rep==JOptionPane.YES_OPTION){
+								credit.dicCredit(GameConfiguration.UPDATE_PRICE_Radiology);
+								hospital.setCredit(credit);
+								int nb_p = hospital.getRadiology().getNb_Patient();
+								hospital.getRadiology().setNb_Patient(nb_p+5);
+								hospital.getRadiology().setNtGrade(3);
+								audio.getaCLevelUp().play();
+							}
+						}
+					} 
+						else{
+						JOptionPane.showMessageDialog(instance,"you can not bay this Staff","Warning", JOptionPane.WARNING_MESSAGE);
+						
+					}
+					break;
+				}
+				
+			}
+		}
+		}catch(Exception e ){
+			
+		}
+		/*-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+*/
+try{
+		if(x==hospital.getSurgery().getName()){
+			int nTGrade = hospital.getSurgery().getNtGrade();
+			int dRGrade = hospital.getSurgery().getDrGrade();
+			
+			if(y=="Doctor"){
+				switch(z){
+				case "Grade 1":
+					JOptionPane.showMessageDialog(instance,"you can't do this operation","Warning", JOptionPane.WARNING_MESSAGE);
+					break;
+				case "Grade 2":
+					if (dRGrade==1 ) {
+						if ((credit.getValue())-GameConfiguration.UPDATE_PRICE_Surgery<0) {
+							JOptionPane.showMessageDialog(instance,"Sorry, You don't have enough money\n You credit : "+credit.getValue()+"$\nPrice this Staffing  : "+GameConfiguration.UPDATE_PRICE_Surgery+"$","Money...!",JOptionPane.WARNING_MESSAGE);
+						}else {
+							int rep = JOptionPane.showConfirmDialog(instance, "the price of the selected Staff is : "
+									+GameConfiguration.UPDATE_PRICE_Surgery+"\n"
+									+ "augmentation of patients nubmer per day : "
+									+5+"\n"
+									+ "do you want to confirm your purchase ?\n", "confirm the purchase", JOptionPane.OK_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE);
+							if (rep==JOptionPane.YES_OPTION){
+								credit.dicCredit(GameConfiguration.UPDATE_PRICE_Surgery);
+								hospital.setCredit(credit);
+								int nb_p = hospital.getSurgery().getNb_Patient();
+								hospital.getSurgery().setNb_Patient(nb_p+5);
+								hospital.getSurgery().setDrGrade(2);
+								audio.getaCLevelUp().play();
+							}
+						}
+					}else {
+						JOptionPane.showMessageDialog(instance,"you can not update this department","Warning", JOptionPane.WARNING_MESSAGE);
+					}
+					break;
+				case "Grade 3":
+					if (dRGrade==1 ) {
+						if ((credit.getValue())-(GameConfiguration.UPDATE_PRICE_Surgery*2)<0) {
+							JOptionPane.showMessageDialog(instance,"Sorry, You don't have enough money\n You credit : "+credit.getValue()+"$\nPrice this update  : "+GameConfiguration.UPDATE_PRICE_Surgery+"$","Money...!",JOptionPane.WARNING_MESSAGE);
+						}else {
+							int rep = JOptionPane.showConfirmDialog(instance, "the price of the selected update is : "
+									+GameConfiguration.UPDATE_PRICE_Surgery+"\n"
+									+ "augmentation of patients nubmer per day : "
+									+5+"\n"
+									+ "do you want to confirm your purchase ?\n", "confirm the purchase", JOptionPane.OK_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE);
+							if (rep==JOptionPane.YES_OPTION){
+								credit.dicCredit(GameConfiguration.UPDATE_PRICE_Surgery*2);
+								hospital.setCredit(credit);
+								int nb_p = hospital.getSurgery().getNb_Patient();
+								hospital.getSurgery().setNb_Patient(nb_p+10);
+								hospital.getSurgery().setDrGrade(3);
+								audio.getaCLevelUp().play();
+							}
+						}
+					}
+					else if (dRGrade==2 ) {
+						if ((credit.getValue())-GameConfiguration.UPDATE_PRICE_Surgery<0) {
+							JOptionPane.showMessageDialog(instance,"Sorry, You don't have enough money\n You credit : "+credit.getValue()+"$\nPrice this update  : "+GameConfiguration.UPDATE_PRICE_Surgery+"$","Money...!",JOptionPane.WARNING_MESSAGE);
+						}else {
+							int rep = JOptionPane.showConfirmDialog(instance, "the price of the selected update is : "
+									+GameConfiguration.UPDATE_PRICE_Surgery+"\n"
+									+ "augmentation of patients nubmer per day : "
+									+5+"\n"
+									+ "do you want to confirm your purchase ?\n", "confirm the purchase", JOptionPane.OK_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE);
+							if (rep==JOptionPane.YES_OPTION){
+								credit.dicCredit(GameConfiguration.UPDATE_PRICE_Surgery);
+								hospital.setCredit(credit);
+								int nb_p = hospital.getSurgery().getNb_Patient();
+								hospital.getSurgery().setNb_Patient(nb_p+5);
+								hospital.getSurgery().setDrGrade(3);
+								audio.getaCLevelUp().play();
+							}
+						}
+					} 
+						else{
+						JOptionPane.showMessageDialog(instance,"you can not bay this Staff","Warning", JOptionPane.WARNING_MESSAGE);
+						
+					}
+					break;
+				}
+				
+			}else{
+				switch(z){
+				case "Grade 1":
+					JOptionPane.showMessageDialog(instance,"you can't do this operation","Warning", JOptionPane.WARNING_MESSAGE);
+					break;
+				case "Grade 2":
+					if (nTGrade==1 ) {
+						if ((credit.getValue())-GameConfiguration.UPDATE_PRICE_Surgery<0) {
+							JOptionPane.showMessageDialog(instance,"Sorry, You don't have enough money\n You credit : "+credit.getValue()+"$\nPrice this Staffing  : "+GameConfiguration.UPDATE_PRICE_Surgery+"$","Money...!",JOptionPane.WARNING_MESSAGE);
+						}else {
+							int rep = JOptionPane.showConfirmDialog(instance, "the price of the selected Staff is : "
+									+GameConfiguration.UPDATE_PRICE_Surgery+"\n"
+									+ "augmentation of patients nubmer per day : "
+									+5+"\n"
+									+ "do you want to confirm your purchase ?\n", "confirm the purchase", JOptionPane.OK_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE);
+							if (rep==JOptionPane.YES_OPTION){
+								credit.dicCredit(GameConfiguration.UPDATE_PRICE_Surgery);
+								hospital.setCredit(credit);
+								int nb_p = hospital.getSurgery().getNb_Patient();
+								hospital.getSurgery().setNb_Patient(nb_p+5);
+								hospital.getSurgery().setNtGrade(2);
+								audio.getaCLevelUp().play();
+							}
+						}
+					}else {
+						JOptionPane.showMessageDialog(instance,"you can not update this department","Warning", JOptionPane.WARNING_MESSAGE);
+					}
+					break;
+				case "Grade 3":
+					if (nTGrade==1 ) {
+						if ((credit.getValue())-(GameConfiguration.UPDATE_PRICE_Surgery*2)<0) {
+							JOptionPane.showMessageDialog(instance,"Sorry, You don't have enough money\n You credit : "+credit.getValue()+"$\nPrice this update  : "+GameConfiguration.UPDATE_PRICE_Surgery+"$","Money...!",JOptionPane.WARNING_MESSAGE);
+						}else {
+							int rep = JOptionPane.showConfirmDialog(instance, "the price of the selected update is : "
+									+GameConfiguration.UPDATE_PRICE_Surgery+"\n"
+									+ "augmentation of patients nubmer per day : "
+									+10+"\n"
+									+ "do you want to confirm your purchase ?\n", "confirm the purchase", JOptionPane.OK_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE);
+							if (rep==JOptionPane.YES_OPTION){
+								credit.dicCredit(GameConfiguration.UPDATE_PRICE_Surgery*2);
+								hospital.setCredit(credit);
+								int nb_p = hospital.getSurgery().getNb_Patient();
+								hospital.getSurgery().setNb_Patient(nb_p+10);
+								hospital.getSurgery().setNtGrade(3);
+								audio.getaCLevelUp().play();
+							}
+						}
+					}
+					else if (nTGrade==2 ) {
+						if ((credit.getValue())-GameConfiguration.UPDATE_PRICE_Surgery<0) {
+							JOptionPane.showMessageDialog(instance,"Sorry, You don't have enough money\n You credit : "+credit.getValue()+"$\nPrice this update  : "+GameConfiguration.UPDATE_PRICE_Surgery+"$","Money...!",JOptionPane.WARNING_MESSAGE);
+						}else {
+							int rep = JOptionPane.showConfirmDialog(instance, "the price of the selected update is : "
+									+GameConfiguration.UPDATE_PRICE_Surgery+"\n"
+									+ "augmentation of patients nubmer per day : "
+									+5+"\n"
+									+ "do you want to confirm your purchase ?\n", "confirm the purchase", JOptionPane.OK_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE);
+							if (rep==JOptionPane.YES_OPTION){
+								credit.dicCredit(GameConfiguration.UPDATE_PRICE_Surgery);
+								hospital.setCredit(credit);
+								int nb_p = hospital.getSurgery().getNb_Patient();
+								hospital.getSurgery().setNb_Patient(nb_p+5);
+								hospital.getSurgery().setNtGrade(3);
+								audio.getaCLevelUp().play();
+							}
+						}
+					} 
+						else{
+						JOptionPane.showMessageDialog(instance,"you can not bay this Staff","Warning", JOptionPane.WARNING_MESSAGE);
+						
+					}
+					break;
+				}
+				
+			}
+		}
+		}catch(Exception e ){
+			
+		}
